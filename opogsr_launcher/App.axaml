@@ -9,7 +9,12 @@
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
     <Application.Styles>
-        <FluentTheme />
+        <FluentTheme>
+            <FluentTheme.Palettes>
+                <ColorPaletteResources x:Key="Light" Accent="#6c7f3a"/>
+                <ColorPaletteResources x:Key="Dark" Accent="#6c7f3a"/>
+            </FluentTheme.Palettes>
+        </FluentTheme>
         <StyleInclude Source="/Styles/DefaultStyles.axaml"/>
     </Application.Styles>
 
@@ -18,17 +23,17 @@
 	</Application.DataTemplates>
 
 	<Application.Resources>
-		<SolidColorBrush x:Key="PrimaryBackground">#ff8f00</SolidColorBrush>
-		<SolidColorBrush x:Key="ButtonSidebarBackground">#da8417</SolidColorBrush>
-		<SolidColorBrush x:Key="ButtonSidebarHoverBackground">#ff9c1e</SolidColorBrush>
+		<SolidColorBrush x:Key="PrimaryBackground">#5a6b2f</SolidColorBrush>
+		<SolidColorBrush x:Key="ButtonSidebarBackground">#46532a</SolidColorBrush>
+		<SolidColorBrush x:Key="ButtonSidebarHoverBackground">#5a6b2f</SolidColorBrush>
 	</Application.Resources>
 
 	<TrayIcon.Icons>
     <TrayIcons>
-      <TrayIcon Clicked="OnTrayIconClicked" Icon="/Assets/Images/icon.ico" ToolTipText="OP OGSR Launcher">
+      <TrayIcon Clicked="OnTrayIconClicked" Icon="/Assets/Images/icon.ico" ToolTipText="Выживший: Побег из Зоны">
         <TrayIcon.Menu>
           <NativeMenu>
-            <NativeMenuItem Icon="/Assets/Images/icon.ico" Header="OP OGSR Launcher" Command="{Binding ShowWindowCommand}"/>
+            <NativeMenuItem Icon="/Assets/Images/icon.ico" Header="Выживший: Побег из Зоны" Command="{Binding ShowWindowCommand}"/>
             <NativeMenuItemSeparator/>
             <NativeMenuItem Header="{Binding Source={x:Static rs:RuntimeResource.Instance}, Path=[TrayExit]}" Command="{Binding ExitCommand}"/>
           </NativeMenu>

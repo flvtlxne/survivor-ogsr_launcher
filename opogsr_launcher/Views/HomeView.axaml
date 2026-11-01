@@ -15,7 +15,7 @@
 								  <Label Classes="LoadBar" Content="{Binding StateStr.Text}" Foreground="White" Background="Transparent" FontSize="24"/>
 							  </Border>
 							  <Border HorizontalAlignment="Center" IsVisible="{Binding ButtonMainVisible}" BoxShadow="3 3 8 0 Black">
-								  <Button Name="MainButton" Content="{Binding ButtonMainStr.Text}" Background="Orange" FontSize="24" Command="{Binding ButtonMainCommand}"></Button>
+								  <Button Name="MainButton" Content="{Binding ButtonMainStr.Text}" Background="#6c7f3a" FontSize="24" Command="{Binding ButtonMainCommand}"></Button>
 							  </Border>
 						  </StackPanel>
 				</Border>
@@ -27,7 +27,7 @@
 								<Label Content="{Binding SizeStr}" Classes="LoadBar" HorizontalAlignment="Right" Grid.Column="1"/>
 							</Grid>
 						</Border>
-						<ProgressBar ShowProgressText="true" Grid.Row="1" Height="20" Foreground="Orange" Value="{Binding Progress}" Minimum="0" Maximum="100">
+						<ProgressBar ShowProgressText="true" Grid.Row="1" Height="20" Foreground="#7a8e44" Value="{Binding Progress}" Minimum="0" Maximum="100">
 							<ProgressBar.Background>
 								<SolidColorBrush Opacity="0.75" Color="Black"/>
 							</ProgressBar.Background>

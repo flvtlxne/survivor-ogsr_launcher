@@ -70,11 +70,11 @@
 	</Style>
 
 	<Style Selector="Button.Active">
-		<Setter Property="Background" Value="#3f71d9"/>
+		<Setter Property="Background" Value="#6c7f3a"/>
 	</Style>
 
 	<Style Selector="Button.Active:pointerover /template/ ContentPresenter">
-		<Setter Property="Background" Value="#4a80f1"/>
+		<Setter Property="Background" Value="#7a8e44"/>
 	</Style>
 
 	<Style Selector="Button">

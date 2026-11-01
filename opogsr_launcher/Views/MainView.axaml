@@ -50,7 +50,13 @@
 				</Border.Background>
 				<Grid RowDefinitions="0.55* * 0.3*">
 					<Border Grid.Row="0">
-						<Image VerticalAlignment="Top" Source="/Assets/Images/logo.png"/>
+						<Viewbox Stretch="Uniform" VerticalAlignment="Top" Margin="0,0,0,16">
+							<StackPanel Spacing="6">
+								<Image Source="/Assets/Images/icon.png" Width="120" Height="120"/>
+								<TextBlock Text="ВЫЖИВШИЙ" FontFamily="fonts:AppFonts#Bender" FontWeight="Bold" FontSize="40" Foreground="White" HorizontalAlignment="Center"/>
+								<TextBlock Text="ПОБЕГ ИЗ ЗОНЫ" FontFamily="fonts:AppFonts#Bender" FontWeight="Bold" FontSize="24" Foreground="White" HorizontalAlignment="Center"/>
+							</StackPanel>
+						</Viewbox>
 					</Border>
 					<Border Grid.Row="1">
 						<StackPanel Spacing="15">
