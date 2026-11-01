@@ -16,13 +16,7 @@ namespace opogsr_common
 
         public static class Links
         {
-            public const string Youtube = "https://www.youtube.com/@prxphet666";
             public const string Steam = "https://store.steampowered.com/app/41700/";
-            public const string Discord = "https://discord.gg/XsWasFeTrC";
-
-            public const string Yoomoney = "https://yoomoney.ru/to/4100117348307270";
-            public const string Boosty = "https://boosty.to/prxphet";
-            public const string DonationAlerts = "https://dalink.to/prxphet";
 
             public const string GithubRateLimit = "https://api.github.com/rate_limit";
         }
