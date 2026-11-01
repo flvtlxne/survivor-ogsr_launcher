@@ -68,9 +68,17 @@
 					</Border>
 					<Border Grid.Row="2">
 						<Viewbox Stretch="Uniform">
-							<Button Command="{Binding OpenLinkCommand}" CommandParameter="{x:Static common:StaticGlobals+Links.Steam}" Classes="IconButton">
-								<Image Source="/Assets/Images/steam.png"/>
-							</Button>
+    						<Grid ColumnDefinitions="* * *">
+        						<Button Command="{Binding OpenLinkCommand}" CommandParameter="{x:Static common:StaticGlobals+Links.Github}" Grid.Column="0" Classes="IconButton" ToolTip.Tip="Мод на GitHub">
+            						<Image Source="/Assets/Images/github.png" Width="250" Height="250"/>
+        						</Button>
+        						<Button Command="{Binding OpenLinkCommand}" CommandParameter="{x:Static common:StaticGlobals+Links.Discord}" Grid.Column="1" Classes="IconButton" ToolTip.Tip="Discord OGSR: баги и вопросы">
+            						<Image Source="/Assets/Images/discord.png" Width="250" Height="250"/>
+        						</Button>
+        						<Button Command="{Binding OpenLinkCommand}" CommandParameter="{x:Static common:StaticGlobals+Links.Steam}" Grid.Column="2" Classes="IconButton" ToolTip.Tip="Зов Припяти в Steam">
+            						<Image Source="/Assets/Images/steam.png" Width="250" Height="250"/>
+        						</Button>
+    						</Grid>
 						</Viewbox>
 					</Border>
 				</Grid>

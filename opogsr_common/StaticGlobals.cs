@@ -17,7 +17,8 @@ namespace opogsr_common
         public static class Links
         {
             public const string Steam = "https://store.steampowered.com/app/41700/";
-
+            public const string Github = "https://github.com/flvtlxne/Survivor-OGSR";
+            public const string Discord = "https://discord.com/servers/ogsr-508530704674455562";
             public const string GithubRateLimit = "https://api.github.com/rate_limit";
         }
 
