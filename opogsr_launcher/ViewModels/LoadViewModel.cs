@@ -28,17 +28,6 @@ namespace opogsr_launcher.ViewModels
 
         [Reactive] public partial RuntimeResourceString LoadSaveStr { get; set; }
 
-        private Encoding GetEncoding()
-        {
-            try
-            {
-                return Encoding.GetEncoding("windows-1251");
-            }
-            catch
-            {
-                return Encoding.Default;
-            }
-        }
 
         private void LoadSavesList()
         {
@@ -48,19 +37,14 @@ namespace opogsr_launcher.ViewModels
                 FileInfo[] fi = di.GetFiles("*" + StaticGlobals.Extensions.Save);
                 var sorted = fi.OrderByDescending(x => x.LastWriteTime);
 
-                Encoding encoding = GetEncoding();
-                Encoding EUTF8 = Encoding.UTF8;
-
                 foreach (FileInfo t in sorted)
                 {
                     string str = t.Name.Replace(StaticGlobals.Extensions.Save, "");
-                    byte[] bytes = encoding.GetBytes(str);
-                    string text = EUTF8.GetString(bytes);
 
                     Saves.Add(new SaveFile
                     {
                         FileName = t.Name,
-                        Text = text,
+                        Text = str,
                         WriteTime = t.LastWriteTime.ToString()
                     });
                 }

@@ -17,7 +17,7 @@ namespace opogsr_common
         public static class Links
         {
             public const string Youtube = "https://www.youtube.com/@prxphet666";
-            public const string Steam = "https://store.steampowered.com/franchise/stalker";
+            public const string Steam = "https://store.steampowered.com/app/41700/";
             public const string Discord = "https://discord.gg/XsWasFeTrC";
 
             public const string Yoomoney = "https://yoomoney.ru/to/4100117348307270";
@@ -33,7 +33,7 @@ namespace opogsr_common
 
             public static string Bin { get; } = Start + "\\bin_x64";
 
-            public static string Appdata { get; } = Start + "\\appdata";
+            public static string Appdata { get; } = Start + "\\_appdata_";
 
             public static string Launcher { get; } = Appdata + "\\launcher";
 
@@ -46,16 +46,16 @@ namespace opogsr_common
 
         public static class Extensions
         {
-            public static string Save { get; } = ".cps";
+            public static string Save { get; } = ".scop";
         }
 
         public static class Names
         {
             public const string GameScriptSettingsFile = "opogsr_options.ltx";
-            public const string GameSettingsFile = "user.ltx";
+            public const string GameSettingsFile = "user_ogsr.ltx";
             public const string LauncherSettingsFile = "settings.ltx";
 
-            public const string GameExecutable = "OPOGSR.exe";
+            public const string GameExecutable = "xrEngine.exe";
 
             public static string Executable { get; } = Path.GetFileName(Environment.ProcessPath)!;
         }
