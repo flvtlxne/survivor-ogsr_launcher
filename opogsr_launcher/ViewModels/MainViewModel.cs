@@ -15,8 +15,6 @@ using System.Linq;
 using System.Reactive;
 using System.Reflection;
 using System.Threading.Tasks;
-using opogsr_launcher.Managers;
-using opogsr_launcher.Other.RuntimeResource;
 
 namespace opogsr_launcher.ViewModels
 {
@@ -28,7 +26,6 @@ namespace opogsr_launcher.ViewModels
             public string Title { get; set; }
         }
 
-        private static DiscordRPCManager _discordRPCManager;
 
         private static HomeViewModel _HomePage;
         private static LoadViewModel _LoadPage;
@@ -62,9 +59,8 @@ namespace opogsr_launcher.ViewModels
             });
         }
 
-        public MainViewModel(HomeViewModel homeViewModel, LoadViewModel loadViewModel, SettingsViewModel settingsViewModel, LogViewModel logViewModel, DiscordRPCManager discordRPCManager)
+        public MainViewModel(HomeViewModel homeViewModel, LoadViewModel loadViewModel, SettingsViewModel settingsViewModel, LogViewModel logViewModel)
         {
-            _discordRPCManager = discordRPCManager;
 
             _HomePage = homeViewModel;
             _LoadPage = loadViewModel;
@@ -73,7 +69,7 @@ namespace opogsr_launcher.ViewModels
 
             string InformationalVersion = Assembly.GetEntryAssembly()!.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion ?? "unknown";
 
-            Logger.Info("OP OGSR Launcher. Build Date: " + InformationalVersion + ".");
+            Logger.Info("Survivor OGSR Launcher. Build Date: " + InformationalVersion + ".");
             Logger.Info("Start...");
 
             _HomePage.ValidateFiles();

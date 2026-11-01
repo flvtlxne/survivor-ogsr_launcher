@@ -20,7 +20,6 @@ namespace opogsr_launcher.ViewModels
 {
     public partial class HomeViewModel : ViewModelBase
     {
-        private static DiscordRPCManager _discordRPCManager;
         private static LauncherGithubManager _launcherGithubManager;
 
         [Reactive] public partial bool IsDownloading { get; set; }
@@ -39,11 +38,9 @@ namespace opogsr_launcher.ViewModels
 
         [Reactive] public partial ReactiveCommand<Unit, Unit> ButtonMainCommand { get; set; }
 
-        public HomeViewModel(DiscordRPCManager discordRPCManager)
+        public HomeViewModel()
         {
             _launcherGithubManager = new(Secrets.GithubToken, Secrets.GithubRepo, Secrets.IsGithubPublicRepo);
-
-            _discordRPCManager = discordRPCManager;
 
             ButtonMainVisible = false;
 
@@ -94,10 +91,8 @@ namespace opogsr_launcher.ViewModels
 
                 Progress = Math.Floor(cur_size * (1.0 / total_size) * 100);
 
-                _discordRPCManager.Client.UpdateState(string.Format(Properties.Resources.StateDownloading, Progress));
             }
 
-            _discordRPCManager.Client.UpdateState(Properties.Resources.StateIdling);
         }
 
         public async Task ValidateFiles()

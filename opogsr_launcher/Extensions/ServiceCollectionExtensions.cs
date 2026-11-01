@@ -11,8 +11,6 @@ namespace opogsr_launcher.Extensions
         {
             public IServiceCollection AddManagers()
             {
-                collection.AddSingleton<DiscordRPCManager>();
-
                 return collection;
             }
 
