@@ -1,14 +1,16 @@
-<p align="center">
-<img width="512px" height="auto" src="https://github.com/user-attachments/assets/973c14e8-085d-4c7a-8b99-32725ec18511">
-<img src="https://github.com/user-attachments/assets/98c252c4-218e-430e-a638-509006730621">
-</p>
+# Survivor OGSR Launcher
 
-Specialized launcher for OP OGSR, stand-alone modification based on game S.T.A.L.K.E.R.
+Лаунчер для порта мода «Выживший: Побег из Зоны» на OGSR Engine.
+Форк [opogsr_launcher](https://github.com/PRXPHET/opogsr_launcher) от [PRXPHET](https://github.com/PRXPHET) (большое спасибо автору за предоставленный исходный код).
 
-# Features
-- Download modification and check for its updates.
-- Start the game.
-- Start the game with loading specific save file: providing faster startup due to skipping intro and other stuff.
-- View news and update changelogs.
-- Pre-change game settings.
-- Supported languages: English, Русский, Українська
+## Возможности
+- Установка мода и проверка обновлений при каждом запуске: скачиваются только изменившиеся файлы.
+- Самообновление лаунчера.
+- Запуск игры, в том числе сразу с загрузкой выбранного сохранения.
+- Статус в Discord.
+- Языки интерфейса: русский, английский, украинский.
+
+## Установка
+1. Скачать `Survivor_Launcher.exe` из [последнего релиза мода](https://github.com/flvtlxne/Survivor-OGSR/releases/latest).
+2. Положить в пустую папку (лучше с путём без кириллицы) и запустить.
+3. Нажать «Скачать». Дальше лаунчер сам предложит обновления.
