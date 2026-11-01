@@ -26,7 +26,7 @@ JsonSerializerOptions options = new()
     TypeInfoResolver = SourceGenerationContext.Default
 };
 
-const string token = Secrets.GithubUploadToken;
+string token = Environment.GetEnvironmentVariable("SURVIVOR_UPLOAD_TOKEN") ?? throw new InvalidOperationException("SURVIVOR_UPLOAD_TOKEN is not set");
 const string repo = Secrets.GithubRepo;
 
 UploaderGithubManager manager = new(token, repo);
