@@ -16,7 +16,7 @@
 		SystemDecorations="BorderOnly"
         x:Class="opogsr_launcher.MainView"
 		x:DataType="vm:MainViewModel"
-        Title="OP OGSR Launcher">
+        Title="Survivor OGSR">
 
 	<Grid RowDefinitions="40 *" PointerPressed="OnPointerPressed">
 		<Grid.Background>
@@ -28,7 +28,7 @@
 			</Border.Background>
 			<Grid ColumnDefinitions="* 120" Margin="10,0">
 				<StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="10">
-					<TextBlock Text="OP OGSR Launcher | by prxphet" Foreground="White" FontSize="14" FontWeight="SemiBold"/>
+					<TextBlock Text="Survivor OGSR Launcher | by prxphet" Foreground="White" FontSize="14" FontWeight="SemiBold"/>
 				</StackPanel>
 				<Grid Grid.Column="1" ColumnDefinitions="* * *" HorizontalAlignment="Right">
 					<Button Classes="ToolbarButton" Command="{Binding MinimizeCommand}" Grid.Column="0">

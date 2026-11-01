@@ -1,6 +1,6 @@
 ﻿<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
 	<Application>
-		<Assembly Name="opogsr_launcher">
+		<Assembly Name="Survivor_Launcher">
 			<Type Name="opogsr_launcher.Other.Settings.ControlToken" Dynamic="Required All"/>
 			<Type Name="opogsr_launcher.Other.RuntimeResource.RuntimeResourceString" Dynamic="Required All"/>
 			<Type Name="opogsr_launcher.Other.Settings.SettingsSeparator" Dynamic="Required All"/>

@@ -7,7 +7,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
 	<LangVersion>14.0</LangVersion>
-	<AssemblyName>OPOGSR_Launcher</AssemblyName>
+	<AssemblyName>Survivor_Launcher</AssemblyName>
 	<ApplicationIcon>Assets\Images\icon.ico</ApplicationIcon>
   </PropertyGroup>
 
