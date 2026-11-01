@@ -134,4 +134,9 @@
       <Generator></Generator>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DiscordRPC">
+      <HintPath>Dynamic\DiscordRPC.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>
