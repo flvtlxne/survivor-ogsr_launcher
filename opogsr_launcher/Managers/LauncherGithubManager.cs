@@ -184,6 +184,30 @@ namespace opogsr_launcher.Managers
             Environment.Exit(0);
         }
 
+                // Archives dropped or renamed in the release would still be mounted by the engine.
+        private static void RemoveStaleArchives(List<IndexData> files)
+        {
+            foreach (var group in files.Where(x => !string.IsNullOrEmpty(x.directory)).GroupBy(x => x.directory!))
+            {
+                string directory = Path.Combine(StaticGlobals.Locations.Start, group.Key);
+                if (!Directory.Exists(directory))
+                    continue;
+
+                HashSet<string> known = new(group.Select(x => x.name), StringComparer.OrdinalIgnoreCase);
+
+                foreach (string path in Directory.EnumerateFiles(directory))
+                {
+                    string ext = Path.GetExtension(path);
+                    bool archive = ext.StartsWith(".sq", StringComparison.OrdinalIgnoreCase) || ext.StartsWith(".db", StringComparison.OrdinalIgnoreCase);
+                    if (!archive || known.Contains(Path.GetFileName(path)))
+                        continue;
+
+                    Logger.Info("Removing stale archive [{0}]", Path.GetFileName(path));
+                    File.SetAttributes(path, FileAttributes.Normal);
+                    File.Delete(path);
+                }
+            }
+        }
         public async Task<FileStates> Validate()
         {
             Trace.Assert(IsInitialized);
@@ -192,6 +216,8 @@ namespace opogsr_launcher.Managers
 
             if (no_json_data.Count == 0)
                 Logger.Exception(new Exception("Validate data count is 0. Something strange."));
+            
+            RemoveStaleArchives(no_json_data);
 
             await Parallel.ForEachAsync(no_json_data, new ParallelOptions() { MaxDegreeOfParallelism = 8 }, async (d, ct) =>
             {
