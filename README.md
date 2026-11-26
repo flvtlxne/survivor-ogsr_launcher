@@ -1,7 +1,6 @@
 # Survivor OGSR Launcher
 
 Лаунчер для порта мода «Выживший: Побег из Зоны» на OGSR Engine.
-Форк [opogsr_launcher](https://github.com/PRXPHET/opogsr_launcher) от [PRXPHET](https://github.com/PRXPHET).
 
 ## Возможности
 - Установка мода и проверка обновлений при каждом запуске: скачиваются только изменившиеся файлы.
