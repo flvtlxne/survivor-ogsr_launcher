@@ -124,7 +124,9 @@ namespace opogsr_common.Managers
         protected async Task ReadRelease()
         {
             var client = await GetClient();
-            var httpResult = await client.GetAsync($"https://api.github.com/repos/{RepoName}/releases/tags/base");
+            var httpResult = await client.GetAsync($"https://api.github.com/repos/{RepoName}/releases/tags/Release");
+            if (httpResult.StatusCode == System.Net.HttpStatusCode.NotFound)
+                httpResult = await client.GetAsync($"https://api.github.com/repos/{RepoName}/releases/tags/base");
             httpResult.EnsureSuccessStatusCode();
             string contents = await httpResult.Content.ReadAsStringAsync();
             release = JsonSerializer.Deserialize(contents, SourceGenerationContext.Default.GithubRelease)!;
